@@ -5,7 +5,7 @@ Transformando variáveis de processo em indicadores estratégicos.
 
 ## 🚀 Visão Geral
 
-Este projeto implementa uma arquitetura completa de ingestão, tratamento, orquestração e disponibilização de dados industriais em tempo real. Os dados utilizados neste projeto são provenientes de um **CLP Siemens S7‑1200**, configurado para publicar variáveis de processo via **protocolo MQTT nativo**.  
+Este projeto implementa uma arquitetura completa de ingestão, tratamento e disponibilização de dados industriais em tempo real. Os dados utilizados neste projeto são provenientes de um **CLP Siemens S7‑1200**, configurado para publicar variáveis de processo via **protocolo MQTT nativo**.  
 Essa abordagem elimina a necessidade de gateways OPC ou drivers proprietários, permitindo comunicação leve, rápida e altamente compatível com arquiteturas modernas de IIoT.
 
 As variáveis publicadas incluem:
@@ -18,7 +18,7 @@ As variáveis publicadas incluem:
 - Consumo energético  
 - Indicadores de utilidades  
 
-Esses dados são enviados continuamente para o broker MQTT (Mosquitto), armazenados na camada RAW e processados pelo ETL Curated.
+Esses dados são enviados continuamente para o broker MQTT (Mosquitto), armazenados na camada RAW (PostgreSQL) e processados pelo ETL Curated.
 
 O objetivo atingido foi construir um pipeline industrial robusto, escalável e confiável, capaz de processar dados em tempo real e gerar indicadores estratégicos, capaz de:
 
