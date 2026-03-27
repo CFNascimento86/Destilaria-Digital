@@ -1,5 +1,4 @@
-OBS: obedecendo as diretrizes da LGPD e a confidencialidade do Cliente, os dados desse script serão gerados de forma sintética,
-mas sendo fidedignos ao processo.
+#OBS: obedecendo as diretrizes da LGPD e a confidencialidade do Cliente, os dados desse script serão gerados de forma sintética, mas sendo fidedignos ao processo.
 
 #Bibliotecas ==========================
 import random
