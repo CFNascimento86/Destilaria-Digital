@@ -115,15 +115,14 @@ Finaliza a conexão.
   `"destilaria/fermentacao/Dorna_01/temperatura_pv"`
 - **Payload:**  
   JSON contendo valor e qualidade:
-
-```json
+```
 {
   "valor": 32.5,
   "qualidade": "GOOD"
 }
-
+```
 ### **Lógica SCL (exemplo):**
-
+```
 IF PublishTrigger THEN
     MQTT_Publish(
         Topic := 'destilaria/fermentacao/Dorna_01/temperatura_pv',
@@ -133,13 +132,14 @@ IF PublishTrigger THEN
         Publish := TRUE
     );
 END_IF;
-
+```
 ### **Testando a comunicação no PC:**
 
 mosquitto_sub -h <IP_DO_BROKER> -t "destilaria/#" -v
 
 ---
 
-## 🏁 8. Conclusão
+ ## 🏁 8. Conclusão
+ 
 Com o MQTT nativo do S7‑1200, é possível integrar o CLP diretamente a arquiteturas modernas de dados industriais, eliminando gateways OPC e reduzindo custos.
 Essa configuração é a base da ingestão de dados do projeto Destilaria Digital.
