@@ -1,4 +1,4 @@
-## 📘 02 — Arquitetura do Pipeline de Dados Industrial
+# 📘 02 — Arquitetura do Pipeline de Dados Industrial
 
 Este documento descreve a arquitetura completa do pipeline de dados do projeto Destilaria Digital, detalhando cada camada, seus componentes, responsabilidades e fluxos de comunicação.
 A solução foi projetada para integrar dados industriais provenientes de um CLP Siemens S7‑1200 via MQTT, processá‑los em tempo real e disponibilizá‑los como indicadores estratégicos.
@@ -42,11 +42,10 @@ Dashboards / BI / Supervisão
 
 ## 🧩 3. Componentes da Arquitetura
 
-3.1 CLP Siemens S7‑1200 (MQTT nativo)
+3.1 - CLP Siemens S7‑1200 (MQTT nativo)
 
 O CLP atua como cliente MQTT, publicando variáveis de processo em tópicos estruturados:
 destilaria/<area>/<equipamento>/<variavel>
-
 
 Exemplos:
 - destilaria/fermentacao/Dorna_01/temperatura_pv
@@ -60,8 +59,7 @@ O payload é enviado em JSON:
 }
 ```
 
-
-3.2 Mosquitto MQTT Broker
+3.2 - Mosquitto MQTT Broker
 
 Responsável por:
 - receber mensagens do CLP
@@ -74,7 +72,7 @@ Porta: 1883
 QoS: 0 ou 1
 Retain: false
 ```
-3.3 RAW Layer (PostgreSQL)
+3.3 - RAW Layer (PostgreSQL)
 
 A camada RAW armazena dados brutos, sem transformação.
 
@@ -93,7 +91,8 @@ Essa camada garante:
 - reprocessamento
 - histórico completo
 
-3.4 ETL Curated (Python)
+
+3.4 - ETL (Python)
 
 Serviço contínuo que:
 - lê novos registros da RAW
@@ -108,7 +107,8 @@ Características:
 - tolerante a falhas
 - leve e eficiente
 
-3.5 CURATED Layer (PostgreSQL)
+
+3.5 - CURATED Layer (PostgreSQL)
 
 Armazena dados tratados e estruturados.
 
@@ -133,7 +133,9 @@ Essa camada é otimizada para:
 - consistência
 - integridade dos dados
 
-3.6 Atualizador GOLD (Python)
+
+3.6 - Atualizador GOLD (Python)
+
 Script que roda a cada hora e executa:
 REFRESH MATERIALIZED VIEW CONCURRENTLY <view>
 
@@ -145,7 +147,8 @@ Atualiza:
 - consumo específico
 - métricas de processo
 
-3.7 GOLD Layer (Materialized Views)
+
+3.7 - GOLD Layer (Materialized Views)
 
 Camada final, pronta para consumo analítico.
 
@@ -164,7 +167,7 @@ Benefícios:
 - estabilidade para dashboards
 
 
-🔄 5. Fluxo Detalhado (Passo a Passo)
+## 🔄 4. Fluxo Detalhado (Passo a Passo)
 
 - CLP S7‑1200 publica variáveis via MQTT
 - Mosquitto recebe e distribui
@@ -175,7 +178,7 @@ Benefícios:
 - A cada hora, o Atualizador GOLD atualiza as materialized views
 - Dashboards consomem diretamente da GOLD
 
-🧠 6. Princípios de Design da Arquitetura
+## 🧠 5. Princípios de Design da Arquitetura
 
 - Simplicidade — fácil de entender, manter e evoluir
 - Baixo custo — tecnologias open‑source e leves
@@ -184,7 +187,7 @@ Benefícios:
 - TO/TI Integration — CLP → MQTT → Banco → BI
 - Industrial‑grade — inspirado em arquiteturas reais de chão de fábrica
 
-# 🏁 7. Conclusão
+## 🏁 6. Conclusão
 
 A arquitetura do pipeline da Destilaria Digital demonstra como integrar dados industriais reais a uma plataforma moderna de dados, utilizando tecnologias acessíveis e práticas recomendadas da Indústria 4.0.
 Ela serve como base sólida para:
