@@ -7,7 +7,7 @@ PG_CONFIG = {
     "host": "localhost",     
     "database": "Destilaria",
     "user": "VS_Destilaria",
-    "password": "LoboMau*86",
+    "password": "*******",
     "port": 5432,
 }
 
