@@ -10,7 +10,7 @@ RAW → CURATED → GOLD
 
 Cada camada possui objetivos distintos:
  
--- inserir figura arquitetura_camadas
+![arquitetura_camadas](https://github.com/user-attachments/assets/2822c0ea-586f-415e-b62f-10845348d163)
 
 
 ## 🟥 2. Esquema RAW
@@ -28,7 +28,8 @@ CREATE TABLE raw.medidas_brutas_destilaria (
 ```
 Descrição dos campos
 
--- inserir imagem descrição_campos
+![descricao_campos](https://github.com/user-attachments/assets/ea32c8dc-0c80-4bf2-b6e0-9c4f7b3b4703)
+
 
 Exemplo de registro
 ```
