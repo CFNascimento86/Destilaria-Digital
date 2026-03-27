@@ -18,7 +18,7 @@ As variáveis publicadas incluem:
 - Consumo energético  
 - Indicadores de utilidades  
 
-Esses dados são enviados continuamente para o broker MQTT (Mosquitto), armazenados na camada RAW (PostgreSQL) e processados pelo ETL Curated.
+Esses dados são enviados continuamente para o broker MQTT (Mosquitto), armazenados na camada RAW (PostgreSQL) e processados pelo ETL.
 
 O objetivo atingido foi construir um pipeline industrial robusto, escalável e confiável, capaz de processar dados em tempo real e gerar indicadores estratégicos, capaz de:
 
