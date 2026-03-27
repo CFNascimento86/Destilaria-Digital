@@ -52,7 +52,7 @@ O fluxo de dados parte de um **CLP Siemens S7‑1200**, que publica variáveis d
                                 |
                                 v
                  +-----------------------------+
-                 |     ETL Curated (Python)    |
+                 |         ETL (Python)        |
                  |      Serviço contínuo       |
                  +--------------+--------------+
                                 |
