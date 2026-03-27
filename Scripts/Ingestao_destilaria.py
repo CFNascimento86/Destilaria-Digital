@@ -18,7 +18,7 @@ MQTT_TOPIC = "destilaria/#"
 PG_HOST = "localhost"
 PG_DB = "Destilaria"
 PG_USER = "VS_Destilaria"
-PG_PASS = "LoboMau*86"
+PG_PASS = "*******"
 PG_PORT = 5432
 
 # Pool de conexões =======================
