@@ -1,4 +1,4 @@
-# 🧪 Simulador de Variáveis — simulacao.py
+# 🧪 Simulador de Variáveis
 
 O script **simulacao.py** gera dados sintéticos para testes do pipeline, imitando o comportamento dos instrumentos e sensores industriais utilizados e publicando via MQTT.
 
