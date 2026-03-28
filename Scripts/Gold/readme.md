@@ -1,4 +1,4 @@
-# 🥇 Atualizador da Camada GOLD — atualiza_views_gold.py
+# 🥇 Atualizador da Camada GOLD
 
 O script **atualiza_views_gold.py** é responsável por atualizar periodicamente todas as materialized views da camada GOLD.
 
