@@ -72,3 +72,15 @@ O fluxo de dados parte de um **CLP Siemens S7‑1200**, que publica variáveis d
                  +-----------------------------+
                  |     Dashboards / BI         |
                  +-----------------------------+
+
+## 📁 Scripts do Projeto
+
+Os scripts utilizados no pipeline estão organizados na pasta: Scripts
+
+Eles incluem:
+
+- ingestão de dados na camada RAW  
+- ETL da camada curated (para tratamento e normalização dos dados) 
+- atualização das views materializadas da camada GOLD  
+- simulador de dados sintéticos (para testes e validação)
+   
